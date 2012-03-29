@@ -1,0 +1,16 @@
+{
+  "name": "appendicular",
+  "subdomain": "appendicular",
+  "private": true,
+  "scripts": {
+    "start": "node app.js"
+  },
+  "version": "0.0.0-5",
+  "engines": {
+    "node": "0.6.12"
+  },
+  "dependencies": {
+    "express": "2.5.8",
+    "jade": ">= 0.0.1"
+  }
+}
