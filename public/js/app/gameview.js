@@ -29,6 +29,6 @@ App.GameView = Backbone.View.extend({
 
   navigate: function(e) {
     e.preventDefault();
-    Directory.navigate($(e.target).parent('a').attr('href'), {trigger: true});
+    console.log('Pretend this linked to a games directory!');
   }
 });
