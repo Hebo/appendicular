@@ -11,7 +11,7 @@ exports.index = function(req, res) {
 
 exports.app = function(req, res) {
   res.render('index', {
-    title: 'Express'
+    title: 'Directorate'
   });
 };
 

@@ -1,4 +1,4 @@
-/*global Backbone:false Game:false _:false*/
+/*global Backbone:false Game:false _ $*/
 window.GameView = Backbone.View.extend({
   template: _.template(
     '<a href="games/<%= name %>">' +
@@ -17,6 +17,9 @@ window.GameView = Backbone.View.extend({
 
   render: function() {
     this.$el.html(this.template(this.model.toJSON()));
+    this.$('img').error(function(e) {
+      $(this).attr('src', 'http://static-cdn.jtvnw.net/ttv-boxart/404_boxart.png');
+    });
     return this;
   },
 

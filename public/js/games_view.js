@@ -3,8 +3,8 @@ var GamesView = Backbone.View.extend({
   template: _.template(
     '<div class="sorter">' +
       'Sort By: ' +
-        '<a data-sort-prop="channels">Channels</span>' +
-        ' | <a data-sort-prop="viewers">Viewers</span>' +
+        '<a data-sort-prop="channels">Channels</a>' +
+        ' | <a data-sort-prop="viewers">Viewers</a>' +
     '</div>'),
   className: 'games',
 
@@ -25,7 +25,6 @@ var GamesView = Backbone.View.extend({
 
   addAll: function() {
     this.$('.game').remove();
-    //window.z = this.$el;
     this.collection.forEach(this.addOne, this);
   },
 
