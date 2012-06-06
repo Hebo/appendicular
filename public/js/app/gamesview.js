@@ -17,7 +17,7 @@ App.GamesView = Backbone.View.extend({
     this.collection.on('add', this.addOne, this);
     this.collection.on('reset', this.addAll, this);
 
-    $(window).bind('scroll', this.checkScroll.bind(this))
+    $(window).bind('scroll', this.checkScroll.bind(this));
   },
 
   loadGames: function() {
@@ -58,11 +58,11 @@ App.GamesView = Backbone.View.extend({
   },
 
   checkScroll: function () {
-    var triggerPoint = 200; // 100px from the bottom
+    var triggerPoint = 200; // from the bottom
     if (!this.isLoading && $(window).height() + $(window).scrollTop() >=
         $(document).height() - triggerPoint ) {
       console.log('loading next page');
-      this.collection.page += 1; // Load next page
+      this.collection.page += 1;
       this.loadGames();
     }
   }
