@@ -9,5 +9,9 @@ window.Games = Backbone.Collection.extend({
 
   hideModel: function(model) {
     model.trigger('hide');
+  },
+
+  comparator: function(game) {
+    return -game.get('viewers');
   }
 });

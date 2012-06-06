@@ -4,9 +4,7 @@ window.GameView = Backbone.View.extend({
     '<a href="games/<%= name %>">' +
       '<img src="http://static-cdn.jtvnw.net/ttv-boxart/<%= name %>.jpg"/></a> Viewers: <%= viewers %>'),
 
-  attributes: {
-    'class': 'game'
-  },
+  className: 'game',
 
   events: {
     'click a': 'navigate'
