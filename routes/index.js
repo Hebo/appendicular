@@ -13,7 +13,7 @@ exports.app = function(req, res) {
 };
 
 exports.games = function(req, res) {
-  request({url: 'http://www.twitch.tv/discovery/top?limit=20', json: true}, function(err, topRes) {
+  request({url: 'http://www.twitch.tv/discovery/top', json: true, qs: req.query}, function(err, topRes) {
     if (err) throw err;
     res.json(topRes.body);
   });

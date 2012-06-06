@@ -1,3 +1,4 @@
+/*global App Backbone $*/
 App.Directory = Backbone.Router.extend({
   routes: {
     "": "index",

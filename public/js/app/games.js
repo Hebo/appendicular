@@ -1,7 +1,16 @@
-/*global Backbone:false, App Game*/
+/*global Backbone:false, App Game $*/
 App.Games = Backbone.Collection.extend({
   model: App.Game,
-  url: '/games',
+  idAttribute: 'name',
+  url: function() {
+    return '/games?' + $.param({
+      limit: this.limit,
+      offset: (this.page - 1) * this.limit
+    });
+  },
+
+  limit: 20,
+  page: 1,
 
   initialize: function() {
     this.on('remove', this.hideModel, this);
