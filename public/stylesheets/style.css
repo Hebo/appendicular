@@ -7,6 +7,14 @@ a {
   color: #00B7FF;
 }
 
+#app {
+    margin: 50px;
+}
+
+.games {
+    width: 600px;
+}
+
 .game {
     float: left;
     width: 140px;
