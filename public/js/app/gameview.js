@@ -1,5 +1,5 @@
-/*global Backbone:false Game:false _ $*/
-window.GameView = Backbone.View.extend({
+/*global App _ Backbone $*/
+App.GameView = Backbone.View.extend({
   template: _.template(
     '<a href="games/<%= name %>">' +
       '<img src="http://static-cdn.jtvnw.net/ttv-boxart/<%= name %>.jpg"/></a> Viewers: <%= viewers %>'),

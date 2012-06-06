@@ -1,5 +1,5 @@
-/*global GameView:false Backbone:false $ _ */
-var GamesView = Backbone.View.extend({
+/*global GameView:false App Backbone $ _ */
+App.GamesView = Backbone.View.extend({
   template: _.template(
     '<div class="sorter">' +
       'Sort By: ' +
@@ -29,7 +29,7 @@ var GamesView = Backbone.View.extend({
   },
 
   addOne: function(game) {
-    var gameView = new GameView({model: game});
+    var gameView = new App.GameView({model: game});
     this.$el.append(gameView.render().el);
   },
 

@@ -1,6 +1,6 @@
-/*global Backbone:false, Game:false*/
-window.Games = Backbone.Collection.extend({
-  model: Game,
+/*global Backbone:false, App Game*/
+App.Games = Backbone.Collection.extend({
+  model: App.Game,
   url: '/games',
 
   initialize: function() {
